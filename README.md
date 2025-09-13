@@ -46,7 +46,6 @@ A lightweight, single‑file Java Swing notepad application with file I/O, find/
 └─ README.md               
 ```
 
-> If you prefer packages, you can place the class under a package and mirror the folder structure. The current file is package-less for simplicity.
 
 ---
 
