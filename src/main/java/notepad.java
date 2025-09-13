@@ -73,11 +73,11 @@ public class notepad extends JFrame {
 
 
         JMenu mHelp = new JMenu("Help");
-        JMenuItem miAbout = item("About Notepad Mini", null, e -> {
+        JMenuItem miAbout = item("About Notepad ", null, e -> {
             String Name = "Kalani sewmini";
             String ID   = "200s19253";
             JOptionPane.showMessageDialog(this,
-                    "Notepad Mini\n\nCreated by: " + "Kalani sewmini" + "\nID: " + "2022s19253",
+                    "Notepad \n\nCreated by: " + "Kalani sewmini" + "\nID: " + "2022s19253",
                     "About", JOptionPane.INFORMATION_MESSAGE);
         });
         mHelp.add(miAbout);
@@ -101,7 +101,7 @@ public class notepad extends JFrame {
         if (confirmLoseChanges()) {
             area.setText("");
             currentFile = null;
-            setTitle("Notepad Mini - Untitled");
+            setTitle("Notepad  - Untitled");
         }
     }
 
@@ -115,7 +115,7 @@ public class notepad extends JFrame {
                 String content = Files.readString(f.toPath(), StandardCharsets.UTF_8);
                 area.setText(content);
                 currentFile = f;
-                setTitle("Notepad Mini - " + f.getName());
+                setTitle("Notepad  - " + f.getName());
             } catch (IOException ex) {
                 error("Could not open file:\n" + ex.getMessage());
             }
@@ -136,7 +136,7 @@ public class notepad extends JFrame {
                 currentFile = sel;
             }
             Files.writeString(currentFile.toPath(), area.getText(), StandardCharsets.UTF_8);
-            setTitle("Notepad Mini - " + currentFile.getName());
+            setTitle("Notepad  - " + currentFile.getName());
         } catch (IOException ex) {
             error("Could not save file:\n" + ex.getMessage());
         }
